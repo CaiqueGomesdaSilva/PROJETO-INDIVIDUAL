@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  
+  header {
+    background-color: black;
+    background-image: url("/Assets/backgrounds/vecteezy_textured-crumpled-black-paper-background_6893584_325.jpg");
+    padding: 15px 0;
+  }
+
+  .logo {
+    width: 1px;
+  }
