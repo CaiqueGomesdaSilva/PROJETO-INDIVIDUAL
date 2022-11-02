@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200;300&family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    background-image: url("../Assets/backgrounds/BLACK-4K.jpg");
+    background-size: cover;
+}
+
+.secao-cadastro {
+width: 100%;
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.container {
+    align-items: center;
+    width: 50vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.container-logo-titulo-loud {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(9, 255, 0);
+    border-radius: 15px 0px 0px 15px;
+}
+
+.container-logo-titulo-loud h1 {
+    font-size: 2.5rem;
+}
+
+.container-logo {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-inputs {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputs {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inputs p {
+    font-size: 1.4rem;
+}
+
+.imagem-sombra2 {
+    position: absolute;
+    }
+
+.imagem-sombra1 {
+    opacity: 0.1;
+}
+
+.imagem-sombra3 {
+    opacity: 0.1;
+}
+
+.estilo-inputs {
+    width: 17vw;
+    margin-bottom: 2vh;
+    padding: 7px;
+}
