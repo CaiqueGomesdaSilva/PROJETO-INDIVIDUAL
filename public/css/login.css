@@ -112,6 +112,7 @@ body {
     }
     .cadastrado {
         width: 100vh;
+        margin-left: 2vw;
         margin-top: 3vh;
         font-size: 1.1rem;
     }
