@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <section class="secao-cadastro">
+        <div class="container">
+            <div class="container-inputs">
+                <div class="return">
+                    <img src="./Assets/icones/seta-voltar.png" width="50px" />
+                </div>
+                <div class="inputs">
+                    <h1>LOGIN</h1>
+                    <p>USERNAME</p> <input class="estilo-inputs" id="inputUser" placeholder="Ex: Caique123"
+                    onblur="validarUsuario()" required>
+
+                    <p>SENHA</p> <input type="password" class="estilo-inputs"
+                    id="inputSenha" placeholder="Ex: Senha123*"
+                    onblur="validarSenha()" required>
+                    <div class="inputBox">
+                        <button onclick="login()">ENTRAR</button>
+                      </div>
+                      <div class="inputBox">
+                        <span class="cadastrado">
+                          Não tem cadastro? Crie uma conta clicando <a href="cadastro.html">
+                            aqui.</a
+                          ></span>
+                      </div>
+                </div>
+            </div>
+            <div class="container-logo-titulo-loud">
+            </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

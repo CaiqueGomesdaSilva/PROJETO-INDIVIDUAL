@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./css/cadastro.css">
+</head>
+
+<body>
+    <section class="secao-cadastro">
+        <div class="container">
+            <div class="container-logo-titulo-loud">
+                <div class="return">
+                    <img src="./Assets/icones/seta-voltar.png" width="50px" />
+                </div>
+                <h1>SE TORNE<br> UM MEMBRO DA</h1>
+                <div class="container-logo" >
+                <img class="imagem-sombra" src="./Assets/logo/LOUD_allmode-preto.png" width="200px" />
+                <img src="./Assets/logo/Loud_-_logo-texto.png" width="380px"/>
+            </div>
+            </div>
+            <div class="container-inputs">
+                <div class="inputs">
+                    <h1>CADASTRO</h1>
+                    <p>USERNAME</p> <input class="estilo-inputs" id="inputUser" placeholder="Ex: Caique123"
+                    onblur="validarUsuario()" required>
+
+                    <p>SENHA</p> <input type="password" class="estilo-inputs"
+                    id="inputSenha" placeholder="Ex: Senha123*"
+                    onblur="validarSenha()" required>
+
+                    <p>NOME COMPLETO</p> <input type="text" class="estilo-inputs" 
+                    id="InputNome" placeholder="Ex: Caique Gomes da Silva"
+                    onblur="validarNome()" required name="">
+
+                    <p>EMAIL</p> <input type="email" class="estilo-inputs" id="InputEmail" placeholder="Ex: caique@sptech.school"
+                    onblur="validarEmail()" required>
+
+                    <p>TELEFONE</p> <input type="text" class="estilo-inputs" 
+                    id="InputTel" placeholder="Ex: 11966193319 (Opcional)"
+                    onkeyup="validarContato()">
+                    <div class="inputBox">
+                        <button onclick="cadastrar()">CADASTRAR</button>
+                      </div>
+                      <div class="inputBox">
+                        <span class="cadastrado">
+                          Já tem uma conta? Efetue login clicando<a href="login.html">
+                            aqui.</a
+                          ></span>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./js/validacao_cadastro.js"></script>
+</html>
