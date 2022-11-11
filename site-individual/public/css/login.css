@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200;300&family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    background-image: url("../Assets/backgrounds/BLACK-4K.jpg");
+    background-size: cover;
+}
+
+.secao-cadastro {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .container {
+        align-items: center;
+        width: 50vw;
+        height: 70vh;
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        border-radius: 50px;
+        box-shadow: 10px 10px 10px black;
+    }
+    
+    .container-logo-titulo-loud {
+        width: 70%;
+        height: 100%;
+        border-radius: 0px 15px 15px 0px;
+        background-image: url(../Assets/imagens/pancada-and-sacy-1024x780.jpg);
+        background-position: center;
+        background-size: cover;
+        border-left: 6px #00ff3c solid;
+    }
+    
+    .container-inputs {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .inputs {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    .inputs p {
+        font-size: 1.4rem;
+    }
+    
+    .inputs h1 {
+        font-size: 4rem;
+        text-align: center;
+    } 
+    
+    .estilo-inputs {
+        width: 17vw;
+        border: none;
+        margin-bottom: 2vh;
+        padding: 7px;
+        justify-content: center;
+        border-bottom: 2px #00ff3c solid;
+    }
+    
+    .estilo-inputs:focus {
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
+    
+    .return img{
+    cursor: pointer;
+    margin-top: 2vh;
+    margin-right: 15vw;
+    margin-bottom: 9vh;
+    }
+    
+    .inputBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .inputBox button {
+        background-color: #00ff3c;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        width: 60%;
+        cursor: pointer;
+        font-weight: 700;
+        font-family:sans-serif;
+    }
+    
+    .inputBox button:hover {
+        transition: 0.2s;
+        padding: 12px;
+        background-color: #000;
+        color:white;
+        cursor: pointer;
+    }
+    .cadastrado {
+        width: 100vh;
+        margin-left: 2vw;
+        margin-top: 3vh;
+        font-size: 1.1rem;
+    }
+    
+    .cadastrado a {
+        text-decoration: none;
+        color: #00ff3c;
+        text-shadow: 1px 3px 3px rgb(175, 175, 175);
+    }
+    
+    .active {
+        border-bottom: 2px red solid;
+    }
+
+    .sombra {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: relative;
+        border-radius: 0px 15px 15px 0px;
+    }
+
+    .textos-login{
+        height: 100%;
+        position: absolute;
+        color: #fff;
+        font-size: 4rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-top: 23vh;
+        
+    }
+
+    .texto1 {
+        position: relative;
+        opacity: 0;
+        transition: 3s;
+    }
+    .texto2 {
+        opacity: 0;
+        position: absolute;
+        transition: 3s;
+    }
+
+    .texto3 {
+        opacity: 0;
+        position: absolute;
+        transition: 0.5s;
+    }
+
+    .opacidade {
+        opacity: 1;
+    }
