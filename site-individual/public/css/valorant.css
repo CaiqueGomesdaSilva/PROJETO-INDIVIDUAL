@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200;300&family=Roboto:wght@100&family=Xanh+Mono:ital@0;1&display=swap');
+
+.valorant-inicial {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.valorant-inicial h1 {
+    text-align: center;
+    width: 70%;
+    position: absolute;
+    top: 25vh;
+    font-size: 3.5rem;
+    font-family: Xanh Mono;
+}
+

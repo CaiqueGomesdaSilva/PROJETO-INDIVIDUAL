@@ -83,8 +83,12 @@ body {
     .return img{
     cursor: pointer;
     margin-top: 2vh;
-    margin-right: 15vw;
-    margin-bottom: 9vh;
+    margin-right: 4vw;
+    margin-bottom: 0vh;
+    }
+
+    .logo-loud {
+        margin-left: 8.7vw;
     }
     
     .inputBox {
@@ -144,27 +148,27 @@ body {
         display: flex;
         text-align: center;
         justify-content: center;
-        margin-top: 23vh;
-        
+        margin-top: 23vh; 
+    }
+
+    .textos-login h1 {
+        text-shadow: 2px 2px 30px rgba(175, 175, 175, 1);
     }
 
     .texto1 {
         position: relative;
-        opacity: 0;
-        transition: 3s;
+        transition: 5s;
     }
     .texto2 {
         opacity: 0;
         position: absolute;
-        transition: 3s;
-    }
-
-    .texto3 {
-        opacity: 0;
-        position: absolute;
-        transition: 0.5s;
+        transition: 5s;
     }
 
     .opacidade {
         opacity: 1;
+    }
+
+    .opacidade1 {
+        opacity: 0;
     }

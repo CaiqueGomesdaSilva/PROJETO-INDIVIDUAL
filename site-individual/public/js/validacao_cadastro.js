@@ -41,24 +41,23 @@ function validarSenha() {
     8 caracteres
     Uma letra maiúscula
     Uma letra Minuscula
-    Um caracter especial`
+    Um caracter especial`;
     alert(texto);
-
   }
 }
 
 var validar_nome = false;
 function validarNome() {
-  var nome = InputNome.value;
+  var nome = inputNome.value;
   /* Devolve a quantidade de nomes em numeros Ex: Sherlock Homes -> vai retornar 2 */
   const nomeCompleto = nome.split(" ");
   /* Verifica se a quantidade de nomes é menor que 1, pois ninguém tem um nome completo de um nome apenas */
   if (nomeCompleto.length <= 1) {
     validar_nome = false;
-    InputNome.classList.add("active");
+    inputNome.classList.add("active");
     alert("Nome Inválido");
   } else {
-    InputNome.classList.remove("active");
+    inputNome.classList.remove("active");
     validar_nome = true;
   }
   /* Faz a substituição das primeiras letras dos nomes caso o usuário coloque a primeira leta do nome minuscula */
@@ -72,7 +71,7 @@ function validarNome() {
 
 var validar_email = false;
 function validarEmail() {
-  var email = InputEmail.value;
+  var email = inputEmail.value;
   var validacao = /\S+@\S+\.\S+/;
   /* Qualquer tipo de texto:
   Seguida por um caractere @ (que é obrigatório em e-mails);
@@ -80,25 +79,93 @@ function validarEmail() {
   E então temos a presença de um ponto, que também é obrigatório;
   E por fim mais um texto, validando tanto emails .com quanto .com.br, e outros que tenham terminologias diferentes */
   if (!validacao.test(email)) {
-    InputEmail.classList.add("active");
+    inputEmail.classList.add("active");
     alert("E-mail Inválido");
     validar_email = false;
   } else {
-    InputEmail.classList.remove("active");
+    inputEmail.classList.remove("active");
     validar_email = true;
   }
 }
 
 var validar_contato = false;
 function validarContato() {
-  var contato = InputTel.value;
+  var contato = inputTel.value;
   if (contato.length > 11) {
     // Valida números telefones celulares para contato
-    InputTel.classList.add("active");
+    inputTel.classList.add("active");
     alert("Contato Inválido");
     validar_contato = false;
   } else {
-    InputTel.classList.remove("active");
+    inputTel.classList.remove("active");
     validar_contato = true;
+  }
+}
+
+function validar_cadastro() {
+  if (validar_usuario && validar_senha && validar_nome && validar_email) {
+    alert(`Cadastro realizado com sucesso!`);
+    cadastrar();
+  } else {
+    alert("Autentificação inválida");
+  }
+}
+
+
+
+function cadastrar() {
+
+  window.location.href = "login.html";
+
+  var usernameVar = inputUser.value;
+  var senhaVar = inputSenha.value;
+  var nomeVar = inputNome.value;
+  var emailVar = inputEmail.value;
+  var contatoVar = inputContato.value;
+
+  if (usernameVar == "" || senhaVar == "" || nomeVar == "" || emailVar == "") {
+    alert("Preencha os campos corretamente!");
+    return false;
+  } else {
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        usernameServer: userVar,
+        senhaServer: senhaVar,
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        contatoServer: contatoVar,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          alert(
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login..."
+          );
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+
+          limparFormulario();
+          // finalizarAguardar();
+        } else {
+          alert("Houve um erro ao tentar realizar o cadastro!");
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+      });
+
+    return false;
   }
 }

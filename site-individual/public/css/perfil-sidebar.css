@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200;300&family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    background-image: url(../Assets/backgrounds/view-of-white-crumpled-paper.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 20vw;
+    background-color: #00ff3c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0px 20px 0px 0px;
+    box-shadow: 5px 1px 40px black;
+}
+
+.padrao_div {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+    font-size: 1.3rem;
+    align-items: center;
+}
+
+.padrao_div:hover {
+    transition: 0.2s;
+    padding: 30px;
+    box-shadow: 10px 1px 40px 1px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.padrao_div a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.padrao_div h1 {
+    margin-top: 1.3vh;
+}
+
+.bemvindo {
+    margin-top: 10vh;
+}
+
+.bemvindo h1 {
+    font-size: 3rem;
+}
+
+.nome {
+    margin-left: 2.8vw;
+}
+
+.quiz {
+    margin-top: 3vh;
+
+}
+
+.quiz img {
+    margin-right: 5vw;
+}
+
+.quiz h1 {
+    margin-right: 3vw;
+}
+
+.tenteasorte img {
+    margin-right: 2vw;
+}
+
+.home img {
+    margin-right: 2vw;
+}
+
+.config img {
+    margin-right: 1.7vw;
+}
+
+.exit img {
+    margin-right: 5vw;
+}
+
+.exit h1 {
+    margin-right: 5vw;
+}
+
+

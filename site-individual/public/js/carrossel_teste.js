@@ -1,40 +1,209 @@
-
+var i = 0;
 
 function carrossel() {
-    
-    var arrayImagens = document.querySelectorAll(".estilo")
-    var contador = 0;
-   while (contador <= arrayImagens.length){
+  var a = 0;
+  var arrayImagens = document.querySelectorAll(".estilo");
 
-        arrayImagens[contador].classList.remove('i1');
-        arrayImagens[contador].classList.add('i2');
-        contador--
-        arrayImagens[contador].classList.remove('i2');
-        arrayImagens[contador].classList.add('i3');
-        contador--
-        arrayImagens[contador].classList.remove('i3');
-        arrayImagens[contador].classList.add('i4');
-        contador--
-        arrayImagens[contador].classList.remove('i4');
-        arrayImagens[contador].classList.add('i5');
-        contador--
-        arrayImagens[contador].classList.remove('i5');
-        arrayImagens[contador].classList.add('i6');
-        contador--
-        arrayImagens[contador].classList.remove('i6');
-        arrayImagens[contador].classList.add('i7');
-        contador--
-        arrayImagens[contador].classList.remove('i7');
-        arrayImagens[contador].classList.add('i8');
-        contador--
-        arrayImagens[contador].classList.remove('i8');
-        arrayImagens[contador].classList.add('i1');
-        contador--
-    } 
-    contador += 2;
-
-    if(contador != arrayImagens.length) {
-        contador = 0;
-    }
+  if (i == 0) {
+    arrayImagens[a].classList.remove("i1");
+    arrayImagens[a].classList.add("i2");
+    a++;
+    arrayImagens[a].classList.remove("i2");
+    arrayImagens[a].classList.add("i3");
+    a++;
+    arrayImagens[a].classList.remove("i3");
+    arrayImagens[a].classList.add("i4");
+    a++;
+    arrayImagens[a].classList.remove("i4");
+    arrayImagens[a].classList.add("i5");
+    a++;
+    arrayImagens[a].classList.remove("i5");
+    arrayImagens[a].classList.add("i6");
+    a++;
+    arrayImagens[a].classList.remove("i6");
+    arrayImagens[a].classList.add("i7");
+    a++;
+    arrayImagens[a].classList.remove("i7");
+    arrayImagens[a].classList.add("i8");
+    a++;
+    arrayImagens[a].classList.remove("i8");
+    arrayImagens[a].classList.add("i1");
+    i++;
+  } else if (i == 1) {
+    arrayImagens[a].classList.remove("i2");
+    arrayImagens[a].classList.add("i3");
+    a++;
+    arrayImagens[a].classList.remove("i3");
+    arrayImagens[a].classList.add("i4");
+    a++;
+    arrayImagens[a].classList.remove("i4");
+    arrayImagens[a].classList.add("i5");
+    a++;
+    arrayImagens[a].classList.remove("i5");
+    arrayImagens[a].classList.add("i6");
+    a++;
+    arrayImagens[a].classList.remove("i6");
+    arrayImagens[a].classList.add("i7");
+    a++;
+    arrayImagens[a].classList.remove("i7");
+    arrayImagens[a].classList.add("i8");
+    a++;
+    arrayImagens[a].classList.remove("i8");
+    arrayImagens[a].classList.add("i1");
+    a++;
+    arrayImagens[a].classList.remove("i1");
+    arrayImagens[a].classList.add("i2");
+    i++;
+  } else if (i == 2) {
+    arrayImagens[a].classList.remove("i3");
+    arrayImagens[a].classList.add("i4");
+    a++;
+    arrayImagens[a].classList.remove("i4");
+    arrayImagens[a].classList.add("i5");
+    a++;
+    arrayImagens[a].classList.remove("i5");
+    arrayImagens[a].classList.add("i6");
+    a++;
+    arrayImagens[a].classList.remove("i6");
+    arrayImagens[a].classList.add("i7");
+    a++;
+    arrayImagens[a].classList.remove("i7");
+    arrayImagens[a].classList.add("i8");
+    a++;
+    arrayImagens[a].classList.remove("i8");
+    arrayImagens[a].classList.add("i1");
+    a++;
+    arrayImagens[a].classList.remove("i1");
+    arrayImagens[a].classList.add("i2");
+    a++;
+    arrayImagens[a].classList.remove("i2");
+    arrayImagens[a].classList.add("i3");
+    i++;
+  } else if (i == 3) {
+    arrayImagens[a].classList.remove("i4");
+    arrayImagens[a].classList.add("i5");
+    a++;
+    arrayImagens[a].classList.remove("i5");
+    arrayImagens[a].classList.add("i6");
+    a++;
+    arrayImagens[a].classList.remove("i6");
+    arrayImagens[a].classList.add("i7");
+    a++;
+    arrayImagens[a].classList.remove("i7");
+    arrayImagens[a].classList.add("i8");
+    a++;
+    arrayImagens[a].classList.remove("i8");
+    arrayImagens[a].classList.add("i1");
+    a++;
+    arrayImagens[a].classList.remove("i1");
+    arrayImagens[a].classList.add("i2");
+    a++;
+    arrayImagens[a].classList.remove("i2");
+    arrayImagens[a].classList.add("i3");
+    a++;
+    arrayImagens[a].classList.remove("i3");
+    arrayImagens[a].classList.add("i4");
+    i++;
+  } else if (i == 4) {
+    arrayImagens[a].classList.remove("i5");
+    arrayImagens[a].classList.add("i6");
+    a++;
+    arrayImagens[a].classList.remove("i6");
+    arrayImagens[a].classList.add("i7");
+    a++;
+    arrayImagens[a].classList.remove("i7");
+    arrayImagens[a].classList.add("i8");
+    a++;
+    arrayImagens[a].classList.remove("i8");
+    arrayImagens[a].classList.add("i1");
+    a++;
+    arrayImagens[a].classList.remove("i1");
+    arrayImagens[a].classList.add("i2");
+    a++;
+    arrayImagens[a].classList.remove("i2");
+    arrayImagens[a].classList.add("i3");
+    a++;
+    arrayImagens[a].classList.remove("i3");
+    arrayImagens[a].classList.add("i4");
+    a++;
+    arrayImagens[a].classList.remove("i4");
+    arrayImagens[a].classList.add("i5");
+    i++;
+  } else if (i == 5) {
+    arrayImagens[a].classList.remove("i6");
+    arrayImagens[a].classList.add("i7");
+    a++;
+    arrayImagens[a].classList.remove("i7");
+    arrayImagens[a].classList.add("i8");
+    a++;
+    arrayImagens[a].classList.remove("i8");
+    arrayImagens[a].classList.add("i1");
+    a++;
+    arrayImagens[a].classList.remove("i1");
+    arrayImagens[a].classList.add("i2");
+    a++;
+    arrayImagens[a].classList.remove("i2");
+    arrayImagens[a].classList.add("i3");
+    a++;
+    arrayImagens[a].classList.remove("i3");
+    arrayImagens[a].classList.add("i4");
+    a++;
+    arrayImagens[a].classList.remove("i4");
+    arrayImagens[a].classList.add("i5");
+    a++;
+    arrayImagens[a].classList.remove("i5");
+    arrayImagens[a].classList.add("i6");
+    i++;
+  } else if (i == 6) {
+    arrayImagens[a].classList.remove("i7");
+    arrayImagens[a].classList.add("i8");
+    a++;
+    arrayImagens[a].classList.remove("i8");
+    arrayImagens[a].classList.add("i1");
+    a++;
+    arrayImagens[a].classList.remove("i1");
+    arrayImagens[a].classList.add("i2");
+    a++;
+    arrayImagens[a].classList.remove("i2");
+    arrayImagens[a].classList.add("i3");
+    a++;
+    arrayImagens[a].classList.remove("i3");
+    arrayImagens[a].classList.add("i4");
+    a++;
+    arrayImagens[a].classList.remove("i4");
+    arrayImagens[a].classList.add("i5");
+    a++;
+    arrayImagens[a].classList.remove("i5");
+    arrayImagens[a].classList.add("i6");
+    a++;
+    arrayImagens[a].classList.remove("i6");
+    arrayImagens[a].classList.add("i7");
+    i++;
+  } else if (i == 7) {
+    arrayImagens[a].classList.remove("i8");
+    arrayImagens[a].classList.add("i1");
+    a++;
+    arrayImagens[a].classList.remove("i1");
+    arrayImagens[a].classList.add("i2");
+    a++;
+    arrayImagens[a].classList.remove("i2");
+    arrayImagens[a].classList.add("i3");
+    a++;
+    arrayImagens[a].classList.remove("i3");
+    arrayImagens[a].classList.add("i4");
+    a++;
+    arrayImagens[a].classList.remove("i4");
+    arrayImagens[a].classList.add("i5");
+    a++;
+    arrayImagens[a].classList.remove("i5");
+    arrayImagens[a].classList.add("i6");
+    a++;
+    arrayImagens[a].classList.remove("i6");
+    arrayImagens[a].classList.add("i7");
+    a++;
+    arrayImagens[a].classList.remove("i7");
+    arrayImagens[a].classList.add("i8");
+    i = 0;
+  }
 }
-setInterval(carrossel, 3500)
+setInterval(carrossel, 2000);
