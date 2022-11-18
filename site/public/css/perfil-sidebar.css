@@ -37,7 +37,7 @@ body {
 
 .padrao_div:hover {
     transition: 0.2s;
-    padding: 30px;
+    padding: 10px;
     box-shadow: 10px 1px 40px 1px rgba(0, 0, 0, 0.8);
     cursor: pointer;
 }
@@ -60,10 +60,11 @@ body {
 
 .bemvindo h1 {
     font-size: 3rem;
+    text-align: center;
 }
 
 .nome {
-    margin-left: 2.8vw;
+    width: 100%;
 }
 
 .quiz {
@@ -79,8 +80,8 @@ body {
     margin-right: 3vw;
 }
 
-.tenteasorte img {
-    margin-right: 2vw;
+.cruzadinha img {
+    margin-right: 1vw;
 }
 
 .home img {

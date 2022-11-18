@@ -14,7 +14,7 @@
         <div class="container">
             <div class="container-logo-titulo-loud">
                 <div class="return">
-                    <img src="./Assets/icones/seta-voltar.png" width="50px" />
+                    <img onclick="voltarPagina()" src="./Assets/icones/seta-voltar.png" width="40px" />
                 </div>
                 <h1>SE TORNE<br> UM MEMBRO DA</h1>
                 <div class="container-logo" >
@@ -41,7 +41,7 @@
                     onblur="validarEmail()" required>
 
                     <p>TELEFONE</p> <input type="text" class="estilo-inputs" 
-                    id=inputTel" placeholder="Ex: 11966193319 (Opcional)"
+                    id="inputTel" placeholder="Ex: 11966193319 (Opcional)"
                     onkeyup="validarContato()">
                     <div class="inputBox">
                         <button onclick="validar_cadastro()">CADASTRAR</button>
@@ -55,9 +55,5 @@
         </div>
     </section>
 </body>
-<script src="./js/validacao_cadastro.js"></script>
 </html>
-
-<script>
-
-</script>
+<script src="./js/validacao_cadastro.js"></script>

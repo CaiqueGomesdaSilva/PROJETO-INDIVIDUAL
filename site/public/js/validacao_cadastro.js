@@ -121,12 +121,8 @@ function cadastrar() {
   var senhaVar = inputSenha.value;
   var nomeVar = inputNome.value;
   var emailVar = inputEmail.value;
-  var contatoVar = inputContato.value;
+  var contatoVar = inputTel.value;
 
-  if (usernameVar == "" || senhaVar == "" || nomeVar == "" || emailVar == "") {
-    alert("Preencha os campos corretamente!");
-    return false;
-  } else {
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
       method: "POST",
@@ -136,7 +132,7 @@ function cadastrar() {
       body: JSON.stringify({
         // crie um atributo que recebe o valor recuperado aqui
         // Agora vá para o arquivo routes/usuario.js
-        usernameServer: userVar,
+        usernameServer: usernameVar,
         senhaServer: senhaVar,
         nomeServer: nomeVar,
         emailServer: emailVar,
@@ -168,4 +164,7 @@ function cadastrar() {
 
     return false;
   }
+
+function voltarPagina() {
+  window.history.back();
 }
