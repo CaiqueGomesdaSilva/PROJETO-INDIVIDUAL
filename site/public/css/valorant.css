@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200;300&family=Roboto:wght@100&family=Xanh+Mono:ital@0;1&display=swap');
 
+.first-main {
+    height: 1200vh;
+    width: 100%;
+    background-image: url("../Assets/backgrounds/view-of-white-crumpled-paper.jpg");
+    background-size: cover;
+}
+
 .valorant-inicial {
     width: 100%;
     display: flex;
@@ -22,8 +29,8 @@
     text-align: justify;
     width: 80%;
     position: absolute;
-    top:45vh;
-    font-size: 1.5rem;
+    top: 43vh;
+    font-size: 1.7rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -32,4 +39,150 @@
     font-size: 1.4rem;
     font-family: Arial;
     color: rgb(57, 57, 57);
+}
+
+.texto-introducao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    margin-top: 15vh;
+    margin-left: 10vw;
+    width: 80%;
+    font-size: 1.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.valorant-conteudo {
+    display: flex;
+}
+
+.conteudo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo-video {
+    display: flex;
+    align-items: center;
+    margin-top: 20vh;
+    text-align: center;
+    width: 100%;
+    font-size: 1.7rem;
+    font-family: Xanh Mono;
+}
+
+.tweet {
+    width: 40%;
+    margin-left: 3vw;
+}
+
+.texto-video {
+    margin-right: 5vw;
+    width: 50%;
+    height: 60vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    text-align: justify;
+}
+
+
+.secao-conhecendo-jogadores {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.legenda-foto2 {
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: Arial;
+    color: rgb(57, 57, 57);
+}
+
+.titulo-jogadores {
+    font-size: 2rem;
+    font-family: Xanh Mono;
+    margin-bottom: 5vh;
+}
+
+.texto-inicial-time {
+    text-align: justify;
+    width: 80%;
+    font-size: 1.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5vh;
+}
+
+.secao-licao-valorant {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.titulo-licao {
+    font-size: 2rem;
+    font-family: Xanh Mono;
+    margin-bottom: 5vh;
+}
+
+.texto-licao {
+    font-size: 1.7rem;
+    text-align: justify;
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.texto-licao b, .texto-introducao b {
+    text-shadow: 1px 1px 1px black;
+}
+
+.jogadores-container {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.jogador {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.texto-jogador {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vh;
+}
+
+.texto-jogador h1 {
+    font-size: 5rem;
+}
+
+.texto-jogador p {
+    font-size: 2rem;
+}
+
+.aspas h1, .saadhak h1, .bzka h1{
+    text-align: center
+}
+
+.aspas p, .saadhak p, .bzka p {
+    text-align:justify;
+    width: 70%;
+    margin-left: 13.5vw;
+}
+
+.pancada p, .sacy p, .less p {
+    text-align: justify;
+    width: 70%;
+}
+.aspas , .saadhak , .bzka {
+    justify-content: right;
 }
