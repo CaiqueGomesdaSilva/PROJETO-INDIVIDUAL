@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200;300&family=Roboto:wght@100&family=Xanh+Mono:ital@0;1&display=swap');
 
 .first-main {
-    height: 1200vh;
     width: 100%;
     background-image: url("../Assets/backgrounds/view-of-white-crumpled-paper.jpg");
     background-size: cover;
+    height: 100%;
 }
 
 .valorant-inicial {
@@ -123,6 +123,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20vh;
 }
 
 

@@ -34,12 +34,12 @@ body {
     align-items: center;
 }
 
-.conteudo h1 {
+.titulo-quiz {
     margin-top: 7vh;
     font-size: 4rem;
 }
 
-.conteudo p {
+.texto-quiz {
     margin-top: 5vh;
     font-size: 2rem;
     text-align:justify;
@@ -61,4 +61,27 @@ body {
     background-color: black;
     color:#ffff
 }
+
+.pergunta {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.box-resposta {
+    margin-top: 2vh;
+    width: 70%;
+    background-color: #00ff3c;
+    height: 5vh;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.box-resposta p {
+    margin-left: 2vw;
+    font-size: 1.7rem;
+}
+
 
