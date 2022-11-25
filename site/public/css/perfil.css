@@ -54,7 +54,8 @@ body {
     border: none;
     background-color: #00ff3c;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 3.5rem;
+    font-family: Bebas Neue;
 }
 
 .conteudo button:hover {
@@ -84,4 +85,50 @@ body {
     font-size: 1.7rem;
 }
 
+.box-resposta:hover {
+    width: 80%;
+    transition: 0.3s;
+}
 
+.container-pontos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.pontos {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items:initial;
+    justify-content:center;
+}
+
+.pontos p {
+    font-size: 2.5rem;
+    margin-left: 3vw;
+}
+
+.botoes {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.botoes button {
+    width: 80%;
+    height: 6vh;
+}
+
+.estilo-botao p {
+    font-size: 2rem;
+    font-family: Bebas Neue;
+}
+
+.tituloResultado {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 5vh;
+}
