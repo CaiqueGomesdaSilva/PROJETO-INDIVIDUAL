@@ -8,12 +8,18 @@ function limpardiv() {
   }
 }
 
+function removerDivGrafico() {
+    var divGrafico = document.getElementById("div_grafico_barra");
+
+    divGrafico.remove();
+}
+
 function mostrarRanking() {
   var div = document.getElementById("div_quiz");
   div.classList.remove("conteudo");
   div.classList.add("conteudo_dois");
   div.innerHTML = `<div class="div_retornar_ranking">
-  <img src="./Assets/icones/seta-voltar.png" height="40vh" onclick="ExibirResultado()"/>
+  <img src="./Assets/icones/seta-voltar.png" height="40vh" onclick=" removerDivGrafico(), ExibirResultado()"/>
   <h1 class="titulo_ranking">RANKING</h1>
   </div>
     <table class="tabela">
@@ -30,6 +36,8 @@ function mostrarRanking() {
   </table>`;
 
   verRanking();
+  graficoPontuacao();
+  
 }
 
 var certas = 0;
@@ -450,4 +458,81 @@ function verRanking() {
     .catch(function (resposta) {
       console.error(resposta);
     });
+}
+
+// class="sessao-grafico-canvas" id="barra_fluxo_produtos_semana"
+
+var labels_nomes = [];
+
+var qtd_pontos = [];
+
+function limparDivGrafico() {
+    console.log("limpando div");
+    var limparDiv = document.getElementById("div_grafico_barra");
+    limparDiv.innerHTML = "";
+}
+
+function graficoPontuacao() {
+    console.log("chamando função obter dados gráfico");
+    var div = document.getElementById("container");
+    var divGrafico = document.createElement("div");
+
+    divGrafico.classList = "div_grafico";
+    divGrafico.id = "div_grafico_barra";
+    div.appendChild(divGrafico);
+
+    fetch("/grafico/grafico").then(function (resposta) {
+        if (resposta.ok) {
+            resposta.json().then(function (resposta) {
+                console.log("Dados recebidos: ", JSON.stringify(resposta));
+                for (let d = 0; d < resposta.length; d++) {
+                    labels_nomes.push(resposta[d].username);
+                    qtd_pontos.push(resposta[d].pontuacaoUsuario);
+                }
+                limparDivGrafico();
+                criarGrafico();
+            });
+
+        } else {
+            throw ('Houve um erro na API!');
+        }
+    }).catch(function (resposta) {
+        console.error(resposta);
+    });
+}
+
+function criarGrafico() {
+    var div = document.getElementById("div_grafico_barra");
+    var tituloGrafico = document.createElement("h1");
+    var canvas = document.createElement('canvas');
+    canvas.className = 'graficos-canvas';
+    tituloGrafico.className = 'titulo_ranking';
+    tituloGrafico.innerHTML = `PONTUAÇÃO TOTAL`;
+    canvas.id = 'barra_grafico_pontuacao_total';
+    div.appendChild(tituloGrafico);
+    div.appendChild(canvas);
+
+    
+    
+    const data_pontuacao_total = {
+        labels: labels_nomes,
+        datasets: [{
+            label: 'Pontuação Total do Jogador',
+            backgroundColor: 'rgb(54, 162, 235)',
+            borderColor: 'rgb(54, 162, 235)',
+            data: qtd_pontos,
+        }
+        ]
+    };
+    
+    const config_grafico_pontuacao_total = {
+        type: 'bar',
+        data: data_pontuacao_total,
+        options: {}
+    };
+    
+    const grafico_barra_fluxo_produtos_semana = new Chart(
+        document.getElementById('barra_grafico_pontuacao_total'),
+        config_grafico_pontuacao_total
+    );
 }

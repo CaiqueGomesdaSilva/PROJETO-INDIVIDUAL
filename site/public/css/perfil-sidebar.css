@@ -15,7 +15,10 @@ body {
 }
 
 .sidebar {
-    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 20vw;
     background-color: #00ff3c;
     display: flex;
