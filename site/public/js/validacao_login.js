@@ -78,6 +78,7 @@ function entrar() {
             sessionStorage.USER_USUARIO = json.username;
             sessionStorage.NOME_USUARIO = json.nome;
             sessionStorage.ID_PERFIL = json.idUsuario;
+            sessionStorage.TENTATIVAS = 0;
 
             setTimeout(function () {
               window.location = "./perfil_quiz.html";
@@ -98,6 +99,7 @@ function entrar() {
 
     return false;
   }
+
 
   function voltarPagina() {
     window.history.back();

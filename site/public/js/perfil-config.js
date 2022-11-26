@@ -4,5 +4,5 @@ function logout() {
 }
 
 function link_login() {
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }

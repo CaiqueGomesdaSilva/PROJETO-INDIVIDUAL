@@ -8,9 +8,10 @@
     <title>Pagina Inicial</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/style-all.css">
+    <script src="./js/header.js"></script>
 </head>
 
-<body>
+<body onload="mudarheader()">
     <main class="first-main">
         <header>
             <div class="container-header">
@@ -18,11 +19,11 @@
                     <img src="./Assets/logo/Loud-logo-verde.png" width="280px" />
                 </div>
                 <nav>
-                        <ul class="textos">
-                            <li><a href="#conhecer-loud">QUEM SOMOS</li></a>
-                            <li><a href="valorant.html">VALORANT</li></a>
-                            <li><a href="login.html">LOGIN</li></a>
-                            <li><a href="cadastro.html">CADASTRO</li></a>
+                        <ul id="textos_header" class="textos">
+                            <a href="#conhecer-loud"><li>QUEM SOMOS</li></a>
+                            <a href="valorant.html"><li>VALORANT</li></a>
+                            <a id="a_login_index" href="login.html"><li id="li_login_index">LOGIN</li></a>
+                            <a id="a_cadastro_index" href="cadastro.html"><li id="li_cadastro_index">CADASTRO</li></a>
                         </ul>
                 </nav>
             </div>

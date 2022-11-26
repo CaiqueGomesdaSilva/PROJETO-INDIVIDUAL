@@ -46,8 +46,13 @@ body {
     width: 35vw;
 }
 
+.tentativas {
+    margin-top: 6vh;
+    font-size: 1.4rem;
+}
+
 .conteudo button {
-    margin-top: 10vh;
+    margin-top: 7.5vh;
     width: 25vw;
     height: 10vh;
     border-radius: 20px;
@@ -98,9 +103,9 @@ body {
 
 .pontos {
     width: 50%;
+    margin-top: 9vh;
     display: flex;
     flex-direction: column;
-    align-items:initial;
     justify-content:center;
 }
 
@@ -120,6 +125,7 @@ body {
 .botoes button {
     width: 80%;
     height: 6vh;
+    cursor: pointer;
 }
 
 .estilo-botao p {
@@ -131,4 +137,65 @@ body {
     font-size: 4rem;
     text-align: center;
     margin-top: 5vh;
+}
+
+
+/* RANKING */
+
+.tabela{
+    width: 60%;
+    border-collapse: collapse;
+}
+
+.th_table{
+    border-bottom: 1px solid black;
+    padding: 2%;
+}
+.tr_table{
+    border: 1px solid black;
+}
+.td_table{
+    text-align: center;
+    padding: 2% 0;
+}
+
+.titulo_ranking {
+    font-size: 3rem;
+    font-family: Bebas Neue;
+}
+
+.conteudo_dois {
+    background-color: #ffff;
+    width: 40%;
+    border-radius: 30px;
+    box-shadow: 10px 1px 40px 1px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.div_retornar_ranking {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.div_retornar_ranking h1 {
+    margin-left: 10vw;
+}
+
+.div_retornar_ranking img {
+    cursor: pointer;
+}
+
+.estilo-desempenho {
+    margin-top: 5vh;
+    font-size: 2.1rem;
+}
+
+.avaliacao_texto {
+    text-align: center;
+    text-shadow: 3px 3px 3px black;
 }
