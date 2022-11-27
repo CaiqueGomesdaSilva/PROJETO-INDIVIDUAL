@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    display: flex;
+    flex-direction: row;
+}
+
+.first-main {
+    height: 175vh;
+    width: 100%;
+    background-image: url("../Assets/backgrounds/view-of-white-crumpled-paper.jpg");
+    background-size: cover;
+}
+
+.container{
+    width: 100%;
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.filho {
+    width: 100%;
+    height: 95vh;
+    display:none;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: white;
+}
+
+
+
+.titulo-botao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-botao h1 {
+    margin-left: 12vw;
+    text-shadow: 2px 2px 2px black;
+}
+
+.titulo-botao button{
+    margin-top: 7.5vh;
+    width: 14vw;
+    height: 8vh;
+    border-radius: 20px;
+    border: none;
+    background-color: #00ff3c;
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: Bebas Neue;
+    margin-left: 8vw;
+    margin-bottom: 7vh;
+    box-shadow: 2px 2px 2px black;
+}
+
+
+.titulo-botao button:hover {
+    background-color: black;
+    color:#ffff
+}
+
+.titulo{
+    color: #00ff3c;
+    padding: 1%;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 4rem;
+}
+.teste{
+    margin-top: 100vh;
+    margin-left: 20vw;
+    background-color: rgba(243, 243, 243, 0.5);
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px black;
+}
+.x{
+    width: 3.5vw;
+    height: 3.5vh;
+    background-color: white;
+    border: 1px solid black;
+    margin: 1px;
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.y{
+    width: 3.5vw;
+    height: 3.5vh;
+    background-color: black;
+    border: 1px solid white;
+    opacity: 0;
+    margin: 1px;
+}
+.z{
+    width: 3.5vw;
+    height: 3.5vh;
+    background-color: transparent;
+    border: none;
+    margin: 1px;
+    color: black;
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.span_resp{
+    color: #00ff3c;
+    text-shadow: 1px 1px 1px 5px black;
+    font-weight:300;
+}
+
+
+.div_dicas2 {
+    width: 30%;
+    margin-top: 7vh;
+    margin-bottom: 10vh;
+    margin-left: 20vw;
+    background-color: rgba(243, 243, 243, 0.5);
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px black;
+    color:black
+}
+
+.dicas h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 2px black;
+    color:#00ff3c;
+    text-align: center;
+}
+
+.dicas_texto {
+    text-align:justify;
+    font-size: 1.3rem;
+}
+
+
+.conteudo {
+    margin-top: 20vh;
+    margin-left: 20vw;
+    background-color: rgba(243, 243, 243, 0.5);
+    width: 50%;
+    height: 60vh;
+    border-radius: 30px;
+    box-shadow: 10px 1px 40px 1px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-cruzadinha {
+    margin-top: 7vh;
+    font-size: 4rem;
+}
+
+.texto-cruzadinha {
+    margin-top: 5vh;
+    font-size: 2rem;
+    text-align:justify;
+    width: 35vw;
+}
+
+.conteudo button {
+    margin-top: 7.5vh;
+    width: 25vw;
+    height: 10vh;
+    border-radius: 20px;
+    border: none;
+    background-color: #00ff3c;
+    cursor: pointer;
+    font-size: 3.5rem;
+    font-family: Bebas Neue;
+}
+
+.conteudo button:hover {
+    background-color: black;
+    color:#ffff
+}
+
+.conteudo_display_none {
+    display: none;
+}
+
+.cruzadinha_display_flex {
+    width: 100%;
+    height: 95vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: white;
+}

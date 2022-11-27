@@ -1,3 +1,4 @@
+var validar_usuario = false;
 function validarUsuario() {
   var usuario = inputUser.value;
   /* Verifica se o usuario tem mais de 6 caractéres */

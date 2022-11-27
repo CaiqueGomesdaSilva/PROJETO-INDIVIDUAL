@@ -53,9 +53,9 @@ INSERT INTO Perguntas(pergunta,resposta,pontos,fkQuiz) VALUES
 ('Em qual modalidade a LOUD foi campeã Mundial?','Valorant',15,1),
 ('Qual time que a LOUD venceu na final do Mundial de Valorant?','optic',20,1),
 ('A LOUD venceu quantos mapas contra a optic?','três',20,1),
-('Qual foi o ultimo mapa do confronto entre LOUD e Optic?','Haven',10,1),
+('Qual foi o ultimo mapa do confronto entre LOUD e Optic?','Heaven',10,1),
 ('Quem executou o ultimo player da optic no ultimo round da final?','Aspas',30,1),
-('Qual foi o resultado do mapa haven entre LOUD x Optic?','13x5',25,1),
+('Qual foi o resultado do mapa Heaven entre LOUD x Optic?','13x5',25,1),
 ('Qual jogador foi eleito MVP da Final?','Aspas',20,1),
 ('Qual foi o pico de audiência na final do Valorant Champions?','1,4 Milhão',20,1);
 

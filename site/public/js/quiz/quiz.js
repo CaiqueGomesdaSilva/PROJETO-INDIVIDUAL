@@ -9,6 +9,8 @@ function limpardiv() {
 }
 
 function removerDivGrafico() {
+    labels_nomes = [];
+    qtd_pontos = [];
     var divGrafico = document.getElementById("div_grafico_barra");
 
     divGrafico.remove();
@@ -36,7 +38,6 @@ function mostrarRanking() {
   </table>`;
 
   verRanking();
-  graficoPontuacao();
   
 }
 
@@ -402,7 +403,7 @@ function ExibirResultado() {
               );
             }
 
-            botaoVerRanking.setAttribute("Onclick", "mostrarRanking()");
+            botaoVerRanking.setAttribute("Onclick", "mostrarRanking(), graficoPontuacao()");
           }
         });
       } else {
@@ -474,13 +475,6 @@ function limparDivGrafico() {
 
 function graficoPontuacao() {
     console.log("chamando função obter dados gráfico");
-    var div = document.getElementById("container");
-    var divGrafico = document.createElement("div");
-
-    divGrafico.classList = "div_grafico";
-    divGrafico.id = "div_grafico_barra";
-    div.appendChild(divGrafico);
-
     fetch("/grafico/grafico").then(function (resposta) {
         if (resposta.ok) {
             resposta.json().then(function (resposta) {
@@ -489,7 +483,6 @@ function graficoPontuacao() {
                     labels_nomes.push(resposta[d].username);
                     qtd_pontos.push(resposta[d].pontuacaoUsuario);
                 }
-                limparDivGrafico();
                 criarGrafico();
             });
 
@@ -501,16 +494,25 @@ function graficoPontuacao() {
     });
 }
 
+
+
 function criarGrafico() {
-    var div = document.getElementById("div_grafico_barra");
+    
+    var divContainer = document.getElementById("container");
+    var divGrafico = document.createElement("div");
+    
+    divGrafico.classList = "div_grafico";
+    divGrafico.id = "div_grafico_barra";
+    divContainer.appendChild(divGrafico);
+
     var tituloGrafico = document.createElement("h1");
     var canvas = document.createElement('canvas');
     canvas.className = 'graficos-canvas';
     tituloGrafico.className = 'titulo_ranking';
     tituloGrafico.innerHTML = `PONTUAÇÃO TOTAL`;
     canvas.id = 'barra_grafico_pontuacao_total';
-    div.appendChild(tituloGrafico);
-    div.appendChild(canvas);
+    divGrafico.appendChild(tituloGrafico);
+    divGrafico.appendChild(canvas);
 
     
     

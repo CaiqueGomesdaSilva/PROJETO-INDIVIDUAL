@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200;300&family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    background-image: url(../Assets/backgrounds/view-of-white-crumpled-paper.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.conteudo {
+    margin-left: 20vw;
+    background-color: rgba(243, 243, 243, 0.5);
+    width: 60%;
+    height: 60vh;
+    border-radius: 30px;
+    box-shadow: 10px 1px 40px 1px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.div_titulo h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: #00ff3c;
+    text-shadow: 2px 2px 2px black;
+}
+
+
+.informacoes_usuario {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.lista {
+    border-radius: 30px;
+    width: 50%;
+    display: flex;
+    align-items: initial;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.lista h1 {
+    font-size: 2.6rem;
+    margin-top: 3vh;
+    margin-left: 2vw;
+}
+
+.lista p {
+    font-size: 2.4rem;
+    margin-top: 3.5vh;
+    margin-left: 1vw;
+}
+
+.x {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 80%;
+    text-align: center;
+    margin-top: 2.5vh;
+}
+
+.x button {
+    margin-top: 2.2vh;
+    width: 30%;
+    height:4.2vh;
+    border-radius: 20px;
+    border: none;
+    background-color: #00ff3c;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-family: Bebas Neue;
+}
+
+.x h1{
+    font-size: 3rem;
+}
+
+.botoes button:hover {
+    background-color: black;
+    color:#ffff
+}
+
+.estilo_div_botoes {
+    width: 100%;
+}
+
+.div_input{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 4%;
+}
+
+.input_user_pass_telefone{
+    margin-top: 2vh;
+    height: 3vh;
+    width: 80%;
+    border: none;
+    background-color: transparent;
+    justify-content: center;
+    border-bottom: 2px #00ff3c solid;
+}
+
+.input_user_pass_telefone:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.y {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}

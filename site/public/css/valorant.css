@@ -187,3 +187,78 @@
 .aspas , .saadhak , .bzka {
     justify-content: right;
 }
+
+.container_faca_cadastro {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    justify-content: center;
+    background-color: rgba(2, 2, 2, 0.5);
+}
+
+.conteudo_login_cadastro {
+    background-image: url(../Assets/backgrounds/design-space-paper-textured-background.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    width: 50vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.close_div {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.close_div img {
+    margin-top: 1vh;
+    margin-right: 1vh;
+    cursor: pointer;
+}
+
+.first-linha, .third-linha, .for-linha {
+    font-size: 3rem;
+    text-shadow: 5px 1px 50px rgb(97 230 104 / 50%);
+}
+
+.second-grande {
+    font-size: 6rem;
+    color: #00ff3c;
+    text-shadow: 5px 1px 15px rgb(0 0 0);
+}
+
+.first-linha {
+    margin-top: 2vh;
+}
+
+.five-linha {
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.five-linha:hover {
+    color: #00ff3c;
+    text-shadow: 1px 1px 19px rgb(0 0 0);
+}
+
+.logo_cadastro_div {
+    width: 600px;
+    position: absolute;
+    margin-top: 5vh;
+    margin-left: 3vw;
+    opacity: 0.1;
+}
+
+.five-linha {
+    position: absolute;
+    margin-top: 52vh;
+}

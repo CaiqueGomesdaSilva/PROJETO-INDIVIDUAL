@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VALORANT</title>
     <link rel="stylesheet" href="../css/style-all.css">
     <link rel="stylesheet" href="../css/valorant.css">
     <script src="./js/header.js"></script>
 </head>
 
-<body onload="mudarheader()">
+<body onload="mudarheader(), userLogado()">
     <main class="first-main">
         <header>
             <div class="container-header">
@@ -47,6 +47,8 @@
                 dominando a Haven e
                 fechando a série da grande final.</p>
         </div>
+
+
         <div class="titulo-video">
             <h1>CONFIRA MOMENTO EM QUE A EQUIPE SE CONSAGRA CAMPEÃ DO VALORANT CHAMPIONS!</h1>
         </div>
@@ -87,6 +89,21 @@
                 <img src="./Assets/logo/teste-logo3.png" width="130px" />
             </div>
         </section>
+
+        <div id="propaganda_cadastro" class="container_faca_cadastro">
+            <div class="conteudo_login_cadastro">
+                <div class="close_div">
+                    <img onclick="excluirDiv()" src="./Assets/icones/excluir.png" width="35px" />
+                </div>
+                <h1 class="first-linha">FAÇA SEU</h1><br>
+                                <h1 class="second-grande">CADASTRO</h1><br> 
+                            <h1 class="third-linha">E JOGUE UM QUIZ</h1><br>
+                    <h1 class="for-linha">SOBRE SUA EQUIPE FAVORITA DE ESPORTS!</h1><br>
+                        <p onclick="redirecionarCadastro()" class="five-linha">clique aqui</p>
+                        <img class="logo_cadastro_div" src="./Assets/logo/LOUD_allmode-preto.png" />
+            </div>
+        </div>
+
         <section class="secao-conhecendo-jogadores">
             <div class="titulo-jogadores">
                 <h1>Conhecendo um pouco mais a Equipe</h1>
@@ -216,3 +233,22 @@
 </body>
 
 </html>
+
+
+<script>
+    var propaganda = document.getElementById("propaganda_cadastro");
+
+function userLogado() {
+    if(sessionStorage.ID_PERFIL != undefined) {
+        propaganda.remove();
+    }
+}
+
+function excluirDiv() {
+    propaganda.remove();
+}
+
+function redirecionarCadastro() {
+    window.location = "./cadastro.html"
+}
+</script>

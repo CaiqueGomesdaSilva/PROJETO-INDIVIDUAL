@@ -1,44 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CRUZADINHA</title>
     <link rel="stylesheet" href="../css/perfil-sidebar.css">
-    <script src="./js/perfil-config.js"></script>
+    <link rel="stylesheet" href="./css/perfil-cruzadinha.css">
+    <script src="./js/perfil_config.js"></script>
 </head>
-<body >
-    <div class="sidebar">
-        <div class="bemvindo">
-            <h1>Seja bem vindo,</h1><br>
-            <h1 id="nomeUsuario" class="nome"></h1>
-        </div>
-        <div id= div1 class="padrao_div quiz"><a href="./perfil_quiz.html">
-           <img src="./Assets/icones/Quiz.png" width="50px" height="50px"/> 
-           <h1>QUIZ</h1></a>
-        </div>
-        <div id = div2 class="padrao_div cruzadinha">
-            <img src="./Assets/icones/cruzadinha.png" width="60px" height="60px" />
-            <a href="./perfil_cruzadinha.html"><h1>PALAVRAS CRUZADAS</h1>
-            </a>
-        </div>
-        <div id = div3 class="padrao_div home"><a href="./index.html">
-            <img src="./Assets/icones/home.png" width="50px" height="50px" /><h1>PÁGINA INICIAL</h1></a>
-        </div>
-        <div id = div4 class="padrao_div config">
-            <img src="./Assets/icones/config-icon2.png" width="60px" height="60px" /><h1>CONFIGURAÇÕES</h1>
-        </div>
-        <div onclick="logout()" id = div5 class="padrao_div exit">
-            <img src="./Assets/icones/logout-icon.png" width="50px" height="50px" /><h1>SAIR</h1>
-        </div>
-    </div>
-    <div class="container">
 
+<body>
+    <main class="first-main">
+    <div class="container">
+        <div class="sidebar">
+            <div class="bemvindo">
+                <h1>Seja bem vindo,</h1><br>
+                <h1 id="nomeUsuario" class="nome"></h1>
+            </div>
+            <div class="padrao_div quiz">
+                <img src="./Assets/icones/Quiz.png" width="50px" height="50px" />
+                <a href="./perfil_quiz.html">
+                <h1>QUIZ</h1>
+                 </a>
+            </div>
+            <div class="padrao_div cruzadinha">
+                <img src="./Assets/icones/cruzadinha.png" width="60px" height="60px" />
+                <a href="./perfil_cruzadinha.html">
+                    <h1>PALAVRAS CRUZADAS</h1>
+                </a>
+            </div>
+            <div class="padrao_div home"><a href="./index.html">
+                    <img src="./Assets/icones/home.png" width="50px" height="50px" />
+                    <h1>PÁGINA INICIAL</h1>
+                </a>
+            </div>
+            <div class="padrao_div config">
+                <img src="./Assets/icones/config-icon2.png" width="60px" height="60px" />
+                <a href="./configuracoes_perfil.html">
+                <h1>CONFIGURAÇÕES</h1>
+                </a>
+            </div>
+            <div onclick="logout()" class="padrao_div exit">
+                <img src="./Assets/icones/logout-icon.png" width="50px" height="50px" />
+                <h1>SAIR</h1>
+            </div>
+        </div>
+        <div id="div_cruzadinha" class="conteudo">
+            <h1 class="titulo-cruzadinha">DESCUBRA AS PALAVRAS</h1>
+            <p class="texto-cruzadinha">Esta cruzadinha contem perguntas que apenas um verdadeiro fã da LOUD saberá responde-lá.
+                Você pode jogar diversas vezes.<br>
+                Se atente nas dicas! &#128540
+            </p>
+                <button onclick="trocarDiv()">INICIAR</button>
+        </div>
+        <div id ="container-filho" class="filho">
+            <div id=div_teste class="teste">
+                <div id= "titulo-botao-dicas" class="titulo-botao">
+                    <h1 class="titulo">PALAVRAS CRUZADAS</h1>
+                </div>
+            </div>
+            <div class="div_dicas2">
+                    <div class="dicas">
+                        <h1>DICAS</h1>
+                        <div id=div_dicas class="dicas_texto">
+                        </div>
+                    </div>
+                </div> 
+        </div>
     </div>
+</main>
 </body>
+
 </html>
 
+<script src="./js/cruzadinha/cruzadinha.js"></script>
 <script>
     nomeUsuario.innerHTML = `${sessionStorage.NOME_USUARIO}!`;
 </script>

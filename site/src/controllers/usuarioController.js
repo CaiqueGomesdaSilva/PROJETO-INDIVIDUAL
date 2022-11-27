@@ -81,8 +81,133 @@ function cadastrar(req, res) {
     }
 }
 
+function confirmar_user(req, res) {
+    var user = req.body.username;
+    var idUsuario = req.body.idUsuario;
+    if (user == undefined) {
+        res.status(400).send("Seu user está undefined!");
+    } else {
+        usuarioModel.confirmar_user(user, idUsuario)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+}
+
+// FUNÇÃO QUE PEGA OS VALORES SETADOS EM PERFIL-CONFIG
+function confirmar_senha(req, res) {
+    var senha = req.body.senha;
+    var idUsuario = req.body.idUsuario;
+    if (senha == undefined) {
+        res.status(400).send("Sua senha está undefined!");
+    } else {
+        usuarioModel.confirmar_senha(senha, idUsuario)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+}
+
+
+// FUNÇÃO QUE PEGA OS VALORES SETADOS EM PERFIL-CONFIG
+function confirmar_telefone(req, res) {
+    var telefone = req.body.telefone;
+    var idUsuario = req.body.idUsuario;
+    if (telefone == undefined) {
+        res.status(400).send("Seu telefone está undefined!");
+    } else {
+        usuarioModel.confirmar_telefone(telefone, idUsuario)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+}
+
+function confirmar_email(req, res) {
+    var email = req.body.email;
+    var idUsuario = req.body.idUsuario;
+    if (email == undefined) {
+        res.status(400).send("Seu email está undefined!");
+    } else {
+        usuarioModel.confirmar_email(email, idUsuario)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+}
+
+
+function listarDadosUsuario(req, res) {
+
+    var idUsuario = req.params.idUsuario
+
+    usuarioModel.listarDadosUsuario(idUsuario)
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
 module.exports = {
     entrar,
     cadastrar,
-    testar
+    testar,
+    confirmar_senha,
+    confirmar_telefone,
+    confirmar_user,
+    confirmar_email,
+    listarDadosUsuario
 }

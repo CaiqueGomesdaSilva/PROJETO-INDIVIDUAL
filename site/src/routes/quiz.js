@@ -10,4 +10,13 @@ router.get("/listar", function (req, res) {
 router.post("/inserirtentativa/:idUsuario", function (req, res) {
     quizController.inserirtentativa(req, res);
 })
+
+router.get("/listarRanking", function (req, res) {
+    quizController.listarRanking(req, res);
+});
+
+router.get("/listarAvaliacao", function (req, res) {
+    quizController.listarAvaliacao(req, res);
+});
+
 module.exports = router;

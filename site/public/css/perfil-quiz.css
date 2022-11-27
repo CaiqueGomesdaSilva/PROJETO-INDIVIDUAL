@@ -26,7 +26,7 @@ body {
 .conteudo {
     margin-left: 20vw;
     margin-bottom: 30vh;
-    background-color: #ffff;
+    background-color: rgba(243, 243, 243, 0.5);
     width: 50%;
     height: 60vh;
     border-radius: 30px;
@@ -168,7 +168,7 @@ body {
 
 .conteudo_dois {
     margin-left: 20vw;
-    background-color: #ffff;
+    background-color: rgba(243, 243, 243, 0.4);
     border-radius: 30px;
     width: 40vw;
     box-shadow: 10px 1px 40px 1px rgba(0, 0, 0, 0.5);
@@ -206,7 +206,7 @@ body {
 .div_grafico {
     margin-top: 10vh;
     margin-left: 20vw;
-    background-color: #ffff;
+    background-color: rgba(243, 243, 243, 0.4);
     border-radius: 30px;
     width: 40vw;
     box-shadow: 10px 1px 40px 1px rgba(0, 0, 0, 0.5);
