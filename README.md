@@ -1,4 +1,4 @@
-<img src="./Assets/index.png" width="400px">
+<img src="./Assets/index_inicio.png" width="600px">
 
 _Web Data Visualization = Visualização de Dados na Web_
 
