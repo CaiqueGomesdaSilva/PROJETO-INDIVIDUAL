@@ -103,7 +103,7 @@ function validarContato() {
 }
 
 function validar_cadastro() {
-  if (validar_usuario && validar_senha && validar_nome && validar_email) {
+  if (validar_usuario && validar_senha && validar_nome && validar_email && validar_contato) {
     alert(`Cadastro realizado com sucesso!`);
     cadastrar();
   } else {

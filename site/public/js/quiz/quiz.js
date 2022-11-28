@@ -461,7 +461,7 @@ function verRanking() {
     });
 }
 
-// PARTE DO GRÁFICO
+// PARTE DO GRAFICO 
 
 var labels_nomes = [];
 
