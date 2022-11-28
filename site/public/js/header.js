@@ -25,3 +25,11 @@ function mudarheader() {
         APerfil.appendChild(LIPerfil);
     }
 }
+
+var propaganda = document.getElementById("propaganda_cadastro");
+
+function userLogado() {
+    if(sessionStorage.ID_PERFIL != undefined) {
+        propaganda.remove();
+    }
+}
