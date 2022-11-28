@@ -191,7 +191,7 @@
 .container_faca_cadastro {
     width: 100%;
     height: 100vh;
-    display: flex;
+    display: none;
     align-items: center;
     position: fixed;
     top:0px;
@@ -261,4 +261,8 @@
 .five-linha {
     position: absolute;
     margin-top: 52vh;
+}
+
+.container_propaganda {
+    display: flex;
 }

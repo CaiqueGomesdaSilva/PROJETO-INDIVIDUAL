@@ -461,7 +461,7 @@ function verRanking() {
     });
 }
 
-// class="sessao-grafico-canvas" id="barra_fluxo_produtos_semana"
+// PARTE DO GRÁFICO
 
 var labels_nomes = [];
 

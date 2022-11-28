@@ -29,7 +29,7 @@ function mudarheader() {
 var propaganda = document.getElementById("propaganda_cadastro");
 
 function userLogado() {
-    if(sessionStorage.ID_PERFIL != undefined) {
-        propaganda.remove();
+    if(sessionStorage.ID_PERFIL == undefined) {
+        propaganda.classList.add('container_propaganda');
     }
 }

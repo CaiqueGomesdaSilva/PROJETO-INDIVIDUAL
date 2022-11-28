@@ -51,7 +51,7 @@ function validarSenha() {
 //Validando Contato do Usuario
 var validar_contato = false;
 function validarContato() {
-  var contato = inputContato.value;
+  var contato = inputTel.value;
   if (contato.length <= 7 || contato.length >= 12){
     // Valida números telefones celulares para contato
     inputTel.classList.add("red");
