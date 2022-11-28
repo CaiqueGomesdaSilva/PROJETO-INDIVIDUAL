@@ -55,7 +55,7 @@ async function confirmar_telefone(telefone, idUsuario) {
 async function confirmar_email(email, idUsuario) {
     console.log("ACESSEI O Usuario MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function alterar(): ")
 
-    var instrucao = `UPDATE Usuario SET Usuario.telefone = '${telefone}'
+    var instrucao = `UPDATE Usuario SET Usuario.email = '${email}'
     WHERE idUsuario = ${idUsuario}`;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return await database.executar(instrucao);
