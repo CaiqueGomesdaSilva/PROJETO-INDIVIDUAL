@@ -3,7 +3,7 @@ var validar_usuario = false;
 function validarUsuario() {
   var usuario = inputUser.value;
   /* Verifica se o usuario tem mais de 6 caractéres */
-  if (usuario.length < 6) {
+  if (usuario.length < 3) {
     inputUser.classList.add("active");
     alert("Nome Inválido");
     validar_usuario = false;

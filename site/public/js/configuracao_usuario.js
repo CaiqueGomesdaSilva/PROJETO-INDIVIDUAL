@@ -381,7 +381,7 @@ function cancelar_telefone() {
        
           nome.innerHTML = resposta[0].nome        
           username.innerHTML = resposta[0].username;
-          senha.innerHTML = resposta[0].senha
+          senha.innerHTML = sessionStorage.SENHA
           email.innerHTML = resposta[0].email;
           telefone.innerHTML = resposta[0].telefone;
       });
