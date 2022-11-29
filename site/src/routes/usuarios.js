@@ -42,4 +42,13 @@ router.put("/confirmar_telefone/:user", function (req, res) {
     usuarioController.confirmar_telefone(req, res);
 });
 
+
+router.delete("/deletarTentativa/:idUsuario", function (req, res) {
+    usuarioController.deletarTentativa(req, res);
+});
+
+router.delete("/deletarPerfil/:idUsuario", function (req, res) {
+    usuarioController.deletarPerfil(req, res);
+});
+
 module.exports = router;

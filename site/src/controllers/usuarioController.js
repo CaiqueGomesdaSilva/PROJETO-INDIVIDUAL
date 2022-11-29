@@ -201,6 +201,46 @@ function listarDadosUsuario(req, res) {
         );
 }
 
+
+
+function deletarTentativa(req, res) {
+
+    var idUsuario = req.params.idUsuario;
+
+    usuarioModel.deletarTentativa(idUsuario)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        )
+        .catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao deletar o post: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+function deletarPerfil(req, res) {
+
+    var idUsuario = req.params.idUsuario;
+
+    usuarioModel.deletarPerfil(idUsuario)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        )
+        .catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao deletar o post: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
 module.exports = {
     entrar,
     cadastrar,
@@ -209,5 +249,7 @@ module.exports = {
     confirmar_telefone,
     confirmar_user,
     confirmar_email,
-    listarDadosUsuario
+    listarDadosUsuario,
+    deletarTentativa,
+    deletarPerfil
 }

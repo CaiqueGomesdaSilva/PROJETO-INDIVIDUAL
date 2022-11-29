@@ -2,7 +2,7 @@ var password = document.getElementById('password_botao');
 var username = document.getElementById('username_botao');
 var email = document.getElementById('email_botao');
 var tel = document.getElementById('tel_botao');
-
+var usuario = document.getElementById('usuario_botao')
 
 var validar_user = false;
 function validarUsuario() {
@@ -395,3 +395,74 @@ function cancelar_telefone() {
  }
 
 
+
+ function excluir_perfil() {
+  btn_usuario.remove();
+
+  usuario.innerHTML += `
+  <div id="div_change_usuario">
+      <label for="change_telefone"></label>
+      <button onclick="deletarTentativa(), deletarPerfil()" >Confirmar</button>
+      <button onclick="cancelar_perfil()">Cancelar</button>
+  </div>
+  `
+}
+
+
+function cancelar_perfil() {
+  div_change_usuario.remove();
+  
+  usuario.innerHTML += `
+  <button id="btn_usuario" onclick="excluir_perfil()">REMOVER PERFIL</button>
+  `;
+}
+
+
+
+function deletarTentativa() {
+
+  var idUsuario = sessionStorage.ID_PERFIL;
+  
+  fetch(`/usuarios/deletarTentativa/${idUsuario}`, {
+      method: "DELETE",
+      headers: {
+          "Content-Type": "application/json"
+      }
+  }).then(function (resposta) {
+
+      if (resposta.ok) {
+      } else if (resposta.status == 404) {
+          window.alert("Deu 404!");
+      } else {
+          throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+      }
+  }).catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+  });
+}
+
+
+function deletarPerfil() {
+
+  var idUsuario = sessionStorage.ID_PERFIL;
+  
+  fetch(`/usuarios/deletarPerfil/${idUsuario}`, {
+      method: "DELETE",
+      headers: {
+          "Content-Type": "application/json"
+      }
+  }).then(function (resposta) {
+
+      if (resposta.ok) {
+          alert('Você excluiu o seu perfil!')
+          window.location = "/index.html"
+          sessionStorage.clear();
+      } else if (resposta.status == 404) {
+          window.alert("Deu 404!");
+      } else {
+          throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+      }
+  }).catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+  });
+}
